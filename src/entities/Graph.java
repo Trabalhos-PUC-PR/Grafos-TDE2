@@ -14,6 +14,10 @@ public class Graph {
 		list.addVertex();
 	}
 	
+	public void removeVertex(int index) {
+		list.removeVertex(index);
+	}
+	
     public void cria_adjacencia(int i, int j, double P) {
     	list.addAdjacencyAt(i, j, P);
     }

@@ -20,7 +20,7 @@ public class Main {
 		
 		ArrayList<Integer> total = new ArrayList<>();
 		
-		System.out.printf("tamanho: %d\n", grafo.adjacentes(1, total));
+		System.out.printf("tamanho: %d\n", grafo.adjacentes(0, total));
 		System.out.printf("Vértices adjacentes: %s\n", total);
 		
 		grafo.imprime_adjacencias();

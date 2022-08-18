@@ -25,10 +25,19 @@ public class AdjacencyList {
 		values.add("");
 		list.add(aux);
 	}
+	
+	public void removeVertex(int index) {
+		if(index < 0 || index > list.size()-1) {
+			System.out.println("Nothing has changed");
+			return;
+		}
+		list.remove(index);
+		values.remove(index);
+	}
 
 	public void addAdjacencyAt(int y, int adjacency, double weight) {
 		if(adjacency < 0 || adjacency > list.size()-1) {
-			System.out.println("não settou");
+			System.out.println("Nothing has changed");
 			return;
 		}
 		Adjacencies aux = new Adjacencies(adjacency, weight);
@@ -51,16 +60,6 @@ public class AdjacencyList {
 
 	public ArrayList<Adjacencies> getAllAdjacenciesFrom(int index){
 		return list.get(index);
-	}
-	
-	public int getMostAdjacenciesCount() {
-		int length = 0;
-		for (ArrayList<Adjacencies> innerList : list) {
-			if (innerList.size() > length) {
-				length = innerList.size();
-			}
-		}
-		return length;
 	}
 
 	public void setValueAt(int index, String value) {
